@@ -1,0 +1,44 @@
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'Boulevard';
+  src: url($font_path + 'boulevard-webfont.woff2') format('woff2'),
+       url($font_path + 'boulevard-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Luis Sans Regular';
+  src: url($font_path + 'luisssans-regular-webfont.woff') format('woff'),
+        url($font_path + 'luisssans-regular-webfont.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Luis Sans Regular", sans-serif;
+  font-size: 20px;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Boulevard", sans-serif;
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}

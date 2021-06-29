@@ -1,0 +1,29 @@
+$white: #FFFFFF;
+$black: #2D2D2D;
+$blue: #94C6CF;
+$dark-blue: #0B132B;
+$purple: #A495CC;
+$green: #4B7F52;
+$orange: #EDBF85;
+$yellow: #F7F06D;
+
+$colors: (
+  "black": $black, 
+  "white": $white,
+  "blue" : $blue,
+  "dark-blue": $dark-blue,
+  "purple": $purple,
+  "green": $green,
+  "orange": $orange,
+  "yellow": $yellow
+);
+
+@each $name, $hex in $colors {
+  .#{$name} {
+    background-color: #{$hex};
+
+    &--text {
+      color: #{$hex}
+    }
+  }
+}

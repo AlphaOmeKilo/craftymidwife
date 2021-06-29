@@ -1,0 +1,41 @@
+@for $i from 0 through 20 {
+  .ma-#{$i} {
+      margin: #{4*$i}px !important
+  }
+
+  .mr-#{$i} {
+    margin-right: #{4*$i}px !important
+  }
+
+  .ml-#{$i} {
+    margin-left: #{4*$i}px !important
+  }
+
+  .mt-#{$i} {
+    margin-top: #{4*$i}px !important
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{4*$i}px !important
+  }
+
+  .pa-#{$i} {
+    padding: #{4*$i}px !important
+  }
+
+  .pr-#{$i} {
+    padding-right: #{4*$i}px !important
+  }
+
+  .pl-#{$i} {
+    padding-left: #{4*$i}px !important
+  }
+
+  .pt-#{$i} {
+    padding-top: #{4*$i}px !important
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{4*$i}px !important
+  }
+}

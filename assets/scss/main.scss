@@ -1,0 +1,53 @@
+@import "_colors";
+@import "_fonts";
+@import "_mixins";
+@import "_spacings";
+@import "_buttons";
+
+html,
+body,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 40px 28px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.aok {
+  &-center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &-flex {
+
+    &-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-between {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-text {
+    &-center {
+      text-align: center;
+    }
+  }
+}
