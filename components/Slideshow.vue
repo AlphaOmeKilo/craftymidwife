@@ -5,8 +5,8 @@
       :key="`craft-${index}`"
       :class="[
         'craft',
-        `${index}`,
         { 'blue craft-active': index == active },
+        `${movingClass}`,
         { 'blue craft-prev': index + 1 == active },
         { 'blue craft-next': index - 1 == active },
         { 'blue craft-prev': active == 0 && index == crafts.length - 1 },
@@ -34,11 +34,24 @@ export default Vue.extend({
   data () {
     return {
       active: 0 as number,
+      movingClass: '' as string,
       ignoreInterval: false as boolean
     }
   },
   computed: {
     ...mapState(['crafts'])
+  },
+  watch: {
+    active (val, oldVal) {
+      if (val > oldVal || (oldVal === this.crafts.length - 1 && val === 0)) {
+        this.movingClass = 'moving-left'
+      } else {
+        this.movingClass = 'moving-right'
+      }
+      setTimeout(() => {
+        this.movingClass = ''
+      }, 250)
+    }
   },
   mounted () {
     setInterval(() => {
@@ -71,7 +84,7 @@ export default Vue.extend({
     left: 50%;
     bottom: 50%;
     right: 50%;
-    transition: all 2s;
+    transition: all 1s;
     background-size: cover;
     background-position: center;
 
@@ -97,6 +110,22 @@ export default Vue.extend({
       left: 0;
       bottom: 0;
       right: 0;
+
+      &.moving-left {
+        z-index: 10;
+        top: 20%;
+        bottom: 20%;
+        left: 90%;
+        right: -50%;
+      }
+
+      &.moving-right {
+        z-index: 10;
+        top: 20%;
+        bottom: 20%;
+        right: 90%;
+        left: -50%;
+      }
     }
   }
 

@@ -25,9 +25,14 @@
       </div>
     </section>
     <section id="about" class="green">
-      <h2 class="white--text aok-text-center mb-10">
-        About me
-      </h2>
+      <div class="container">
+        <h2 class="white--text aok-text-center mb-10">
+          About me
+        </h2>
+        <div class="about-me-box">
+          <img src="~/assets/images/ceri3.png">
+        </div>
+      </div>
     </section>
     <section id="packaging" class="blue">
       <div class="container">
@@ -149,6 +154,14 @@ export default Vue.extend({
     width: 80%;
     max-width: 480px;
     cursor: auto;
+  }
+}
+
+#about {
+  .about-me-box {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #2D2D2D;
   }
 }
 </style>
